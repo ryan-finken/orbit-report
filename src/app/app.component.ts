@@ -14,10 +14,10 @@ export class AppComponent {
     this.sourceList = [];
     let satellitesUrl = 'https://handlers.education.launchcode.org/static/satellites.json';
 
-    window.fetch(satellitesUrl).then(function (response) {
+    window.fetch(satellitesUrl).then(function (response) { // ? no return type?
       response.json().then(function (data) {
 
-        let fetchedSatellites = data.satellites; // why no type declaration?
+        let fetchedSatellites = data.satellites; // ? no type declaration?
         for (const satelliteJSON of fetchedSatellites) {
           const satellite: object = new Satellite(
             satelliteJSON.name,
