@@ -26,11 +26,11 @@ export class OrbitListComponent implements OnInit {
     });
  }
 
- bg(rowIndex: number): string {
+ getRowBGColor(rowIndex: number): string {
     if (rowIndex % 2 === 0) {
-       return 'green';
+       return '#b2e38f'; // green
     } else {
-       return 'yellow';
+       return '#acbae3'; // blue
     }
  }
 
