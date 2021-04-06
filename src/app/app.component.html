@@ -1,6 +1,14 @@
-<app-orbit-list [satellites]="displayList" class="inline"></app-orbit-list>
+<div class="container">
+    <div class="list">
+        <app-orbit-list [satellites]="displayList" class="inline"></app-orbit-list>
+    </div>
+
+    <div class="counts">
+        <app-orbit-counts [satellites]="displayList" class="inline"></app-orbit-counts>
+    </div>
+</div>
+
 <div class="search-form">
     <input #searchTerm (keyup.enter)="search(searchTerm.value)" />
     <button (click)="search(searchTerm.value)">search</button>
 </div>
-<app-orbit-counts [satellites]="displayList" class="inline"></app-orbit-counts>
